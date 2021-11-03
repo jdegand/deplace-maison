@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/favicon-32x32.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="style.css">
+    <title>Deplace Maison</title>
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <div id="preloader">
+        <div>
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            viewBox="0 0 100 100" xml:space="preserve" width="100px" height="100px">
+                <g>
+                    <g>
+                    <path style="fill:#FF6900;" d="M89.8,85.7l-2.4-12.2l-4.8-31c0,0-2.7-18.2-3.3-22c-0.6-3.8-1.8-7.3-1.9-7.6
+                        c-0.2-0.3-0.3-0.6-0.9-1.3c-0.7-0.7-1.3-0.1-1.5,0c-0.3,0.1-0.6,1-0.6,1c-0.2,1-0.6,2.5-0.9,4.3c-0.8,4.3-1.2,7.6-1.4,9.9
+                        c-0.5,4.7-1.1,9.9-1.5,12.8c-0.5,4.5-1.2,10-2.4,16.8c-0.7,4-1.8,9.7-1.9,9.6c-0.2-0.2-0.2-0.3-0.2-0.3l-1.5-8.8L62,41.4
+                        c0,0-4.9-30.4-5.2-31.5c-0.3-1.1-0.8-2-1.7-2.1c-0.8-0.1-1.3,0.7-1.4,1.1c-0.1,0.4-0.6,2.9-0.6,2.9s-1.9,10.4-2.3,12
+                        c-0.3,1.5-1.9,11.7-2.1,12.9C48.5,38,45.1,56,45.1,56L43,65.6c0,0-1-7.6-1.2-9.7c-0.2-2.1-1.9-13-1.9-13s-2.4-12.8-2.8-16.2
+                        c-0.3-3.5-1.4-9.1-1.4-9.1s-1.6-6.3-2-7.8c-0.4-1.5-0.8-2.1-0.8-2.1c-0.4-0.6-1-0.3-1.4-0.2C31.1,7.7,30.6,9,30.6,9
+                        s-2,5.8-2.2,6.7c-0.3,0.9-3.9,12.1-3.9,12.1s-3,10.9-3.2,11.6c-0.2,0.6-2.6,11.9-2.9,13c-0.3,1.1-3.9,15.3-3.9,15.3
+                        s-2.5,11.7-2.9,13.7c-0.4,2.1-1.5,9.7-1.5,10.5c0,0.8,0.1,0.8,0.3,1.4c0.2,0.6,1.8,0.5,3.4,0.6c1.6,0.1,5.2-0.1,8-0.1
+                        c2.7-0.1,6.1-0.5,6.1-0.5s13.9-1.4,14.8-1.5c0.9-0.1,18.8-1.3,19.8-1.4c1-0.1,12.1-0.8,15.1-0.9c3-0.1,9.2-1,11.2-1.2
+                        C90.7,88,89.8,85.7,89.8,85.7 M73.7,29.7c0,0,1.3-10.3,1.5-11c0.2-0.7,0.8-4,0.8-4s0.9,3.5,1.3,5.6c0.4,2.1,1.9,12.5,1.9,12.5
+                        l0.7,4.4l-6.9,0.5L73.7,29.7z M82.6,87.1c-1.3,0.1-14.1,0.8-14.1,0.8s-15,1.1-18.1,1.3c-3.1,0.2-22.3,1.9-22.3,1.9
+                        s-7.5,0.8-9.8,0.8h-5.6c0,0-0.6-0.1-0.6-0.4c0-0.3,0.2-2.7,0.6-5.3c0.4-2.5,3.8-18.3,3.8-18.3s4.4-18.1,4.8-19.4
+                        c0.4-1.3,3.9-16.1,4.4-17.8C26.3,29,30,17.3,30,17.3l1.9-5.9l0.7,2.2l-3.1,11.6L24,46.6c0,0-6.4,26.2-6.9,29.1
+                        c-0.5,2.9-2.6,11.6-2.6,11.6s-0.2,1.8-0.2,2c0,0.2,0.8,0.2,0.8,0.2s2.7-0.3,3.1-0.2c0.4,0,6.2,0,9.5-0.2
+                        c3.3-0.2,21.5-1.4,22.5-1.5c1.1-0.1,30.4-2.1,30.4-2.1s5.8-0.5,6.1-0.6c0.3-0.1,0.5-0.1,0.5-0.1l0.5,1.6
+                        C87.8,86.3,83.9,87,82.6,87.1"/>
+                    </g>
+                    <g>
+                        <path style="fill:#110202;" d="M27.1,74c0,0-0.1,0.2-0.3,0.2c-0.2,0-0.2-0.2-0.2-0.4c0-0.2,0.4-2,0.6-2.4c0.1-0.5,0.5-1.6,0.5-1.6
+                            s0.1-0.2,0.3-0.2c0.2,0,0.2,0,0.3,0.1c0.1,0.1,0.1,1,0.1,1.1c0,0.1,0,0.6,0.1,0.8c0,0.2,0.1,0.2,0.1,0.2s0.1,0,0.2-0.1
+                            c0.1-0.1,0.8-1.5,0.8-1.5s0.1-0.2,0.1-0.2c0,0,0.1-0.1,0.2-0.1c0.1,0,0.2,0,0.2,0.1c0,0.1,0.1,0.1,0,0.2c0,0.1-0.1,0.7-0.1,0.8
+                            c0,0.1-0.1,1.1-0.1,1.4c0,0.2,0,1,0,1s-0.1,0.3-0.2,0.3c-0.2,0-0.2-0.3-0.2-0.3s0-0.4,0-0.7c0-0.3,0.1-1.2,0.1-1.2s0-0.2,0-0.2
+                            c0,0-0.3,0.6-0.3,0.6s-0.3,0.4-0.3,0.5c0,0.1-0.2,0.2-0.4,0.2c-0.2,0-0.3-0.1-0.4-0.3c-0.1-0.2-0.1-1.1-0.1-1.1s0-0.1,0-0.1
+                            c0,0-0.3,0.8-0.4,1.2c-0.1,0.4-0.4,1.7-0.4,1.7S27.1,73.9,27.1,74"/>
+                        <path style="fill:#110202;" d="M38.3,71.8c0,0-0.2,0-0.2,0c0,0,0-0.4,0-0.4s0-0.8,0-0.9c0-0.1,0-0.5,0-0.6c0-0.1-0.1-0.2-0.3-0.3
+                            c-0.2,0-0.3,0.2-0.3,0.2l-0.3,0.7L36.6,72c0,0-0.1,0.1-0.2,0.1c0,0-0.1,0.1-0.1,0.1l0,0.4c0,0-0.2,0.6-0.3,0.9
+                            c0,0.4,0.2,0.4,0.2,0.4c0.1,0,0.1,0,0.2-0.1c0.1,0,0.1-0.2,0.1-0.2s0.1-0.5,0.2-0.6c0-0.1,0.2-0.5,0.2-0.5l0.6,0
+                            c0,0-0.1,0.7-0.1,0.8c0,0.1,0.1,0.3,0.1,0.3s0.1,0.1,0.2,0c0.1,0,0.2-0.2,0.2-0.2l0-1l0.2,0c0,0,0.2,0,0.2-0.2
+                            C38.4,71.9,38.3,71.8,38.3,71.8 M37.5,71.9l-0.4,0c0,0,0.2-0.5,0.2-0.6c0-0.1,0.2-0.4,0.2-0.4l0,0L37.5,71.9z"/>
+                        <path style="fill:#110202;" d="M44.3,69.8c0,0,0.1-0.2,0.3-0.2c0.2,0,0.2,0.1,0.2,0.4c0,0.3-0.3,3.1-0.3,3.1s0,0.4-0.3,0.4
+                            c-0.3,0-0.3-0.3-0.3-0.3L44.3,69.8"/>
+                        <path style="fill:#110202;" d="M51.7,70.2c0.2-0.2,0.5-0.2,0.7-0.1c0.2,0.1,0.2,0.3,0.2,0.3c0,0.1-0.1,0.1-0.2,0.1
+                            c-0.1,0-0.2,0-0.2,0c0,0-0.1,0-0.2,0.1c-0.1,0.1-0.2,0.4-0.3,0.5c-0.1,0.2,0,0.6,0,0.7c0,0.1,0.2,0.7,0.2,0.8c0,0.2,0,0.8-0.1,1
+                            c-0.1,0.2-0.4,0.4-0.6,0.5c-0.2,0.1-0.4,0.1-0.6,0.1c-0.1,0-0.3-0.2-0.3-0.2c0-0.1,0-0.2,0.1-0.2c0.1-0.1,0.2,0,0.2,0
+                            c0.1,0,0.2,0,0.2,0s0.3,0,0.4-0.2c0.1-0.2,0.2-0.3,0.2-0.5c0-0.2-0.2-0.7-0.2-0.9c0-0.2-0.1-0.5-0.1-0.7c0-0.2,0-0.6,0.2-0.8
+                            C51.5,70.5,51.7,70.2,51.7,70.2"/>
+                        <path style="fill:#110202;" d="M60.7,70.9c-0.3-0.7-0.8-0.6-0.8-0.6c-0.2,0-0.8,0.2-1,1c-0.1,0.2-0.1,0.6-0.2,0.8
+                            c-0.1,0.8-0.1,1,0.1,1.7c0.2,0.6,1,0.5,1.1,0.5c0.1,0,0.5-0.2,0.9-1C61.1,72.4,61,71.6,60.7,70.9 M60.2,73.3
+                            c-0.2,0.3-0.4,0.5-0.4,0.6c-0.1,0-0.3,0.1-0.3,0c-0.1-0.1-0.3-0.3-0.3-0.8c0-0.5,0.1-1,0.1-1.3c0.1-0.3,0.2-0.6,0.3-0.8
+                            c0.2-0.2,0.3-0.2,0.3-0.2c0,0,0.1,0,0.2,0.1c0.1,0.1,0.3,0.4,0.3,0.9C60.5,72.2,60.4,72.9,60.2,73.3"/>
+                        <path style="fill:#110202;" d="M66.5,72c0,0,0.4,1.5,0.5,1.9c0.1,0.4,0.3,0.5,0.4,0.5c0.1,0,0.4,0,0.6-1.2
+                            c0.2-1.2,0.6-2.6,0.6-2.6s0.2-0.6,0.2-0.7c0-0.1-0.1-0.2-0.2-0.2c0,0-0.2,0-0.2,0.1c0,0-0.2,0.5-0.2,0.7c0,0.2-0.4,1.7-0.5,1.8
+                            c-0.1,0.1-0.2,1.2-0.2,1.2l0,0.1l-0.2-0.8c0,0-0.2-1-0.3-1.2c0-0.1-0.1-0.5-0.2-0.5c0,0-0.1-0.2-0.3-0.2c-0.2,0-0.2,0.1-0.3,0.4
+                            c-0.1,0.3-0.2,0.6-0.3,0.9c-0.1,0.3-0.3,1.4-0.3,1.7c0,0.3-0.1,0.7-0.1,0.9c0,0.1,0.1,0.3,0.2,0.3c0.1,0,0.1,0,0.2-0.1
+                            c0-0.1,0.1-0.2,0.1-0.3c0-0.1,0.2-1.2,0.2-1.4C66.1,73,66.4,72.1,66.5,72C66.4,71.9,66.5,72,66.5,72"/>
+                        <path style="fill:#110202;" d="M25.7,80.3c0,0-0.1-0.6-0.3-1.1c0,0-0.1-0.2-0.3-0.4c-0.2-0.1-0.2-0.1-0.3-0.1
+                            c-0.1,0-0.2,0.1-0.2,0.1c-0.4,0.5-1.5,6.6-1.6,7c0,0-0.1,0.2,0,0.3c0,0.1,0.1,0.1,0.1,0.2c0.3,0.1,1-0.8,1.1-0.9
+                            c0.4-0.4,0.7-0.9,1-1.6c0.3-0.6,0.3-1.1,0.4-1.5C25.6,81.8,25.7,81.1,25.7,80.3 M25.1,81.6c-0.1,0.9-0.3,1.6-0.5,1.9
+                            c-0.2,0.4-0.3,0.6-0.3,0.7c-0.2,0.4-0.5,0.6-0.7,0.8v-0.1l1.2-5.2c0,0,0-0.1,0.1-0.1c0,0,0.1,0.1,0.1,0.1c0.1,0.2,0.1,0.4,0.2,0.7
+                            C25.1,80.5,25.2,80.8,25.1,81.6"/>
+                        <path style="fill:#110202;" d="M31.8,79.9c0-0.1,0.1-0.2,0.2-0.3c0,0,0.1-0.1,0.2-0.1c0.1,0,0.2,0,0.3,0c0.3,0,0.6,0,0.8-0.1
+                            c0,0,0.1-0.1,0.3-0.1c0.1,0,0.1,0,0.2,0.1c0.1,0,0.1,0.1,0.1,0.1c0,0,0,0.1,0,0.2c0,0.1-0.1,0.1-0.1,0.1C33.4,79.9,33,80,33,80
+                            c-0.1,0-0.3,0-0.6,0c0,0-0.1,0.1-0.1,0.2c0,0.1-0.2,1.3-0.2,1.3L32,82.4c0,0,0,0.1,0,0.1c0,0,0.3,0,0.4,0c0.1,0,0.5,0,0.5,0l0.3,0
+                            c0,0,0.1,0.1,0.1,0.2c0,0.1-0.1,0.2-0.1,0.3c-0.1,0-0.6,0.1-0.6,0.1l-0.6,0.1c0,0-0.2,0-0.2,0c0,0-0.1,0.1-0.1,0.1
+                            c0,0-0.2,1.8-0.2,1.8l0,0.3v0.1l0,0l0.6-0.1c0,0,0.2-0.1,0.2-0.1c0,0,0.2,0,0.3,0c0.1,0,0.2,0,0.2,0.1c0,0,0,0.2,0,0.2
+                            c0,0.1-0.5,0.2-0.5,0.2S32.1,86,31.9,86c-0.3,0-0.5,0-0.5-0.1c-0.1-0.1-0.2-0.1-0.2-0.3c0-0.2,0.3-3.2,0.3-3.2l0.3-2.4
+                            C31.8,80,31.8,79.9,31.8,79.9"/>
+                        <path style="fill:#110202;" d="M32.7,77.9c0,0-0.1-0.2,0-0.3c0.1-0.2,0.4-0.4,0.5-0.5c0.1-0.1,0.4-0.4,0.4-0.4s0.1-0.1,0.2-0.1
+                            c0.1,0,0.2,0,0.2,0.1c0,0.1,0,0.2,0,0.2c0,0.1-0.5,0.6-0.5,0.6l-0.4,0.4c0,0-0.1,0.1-0.2,0.1C32.9,78,32.7,77.9,32.7,77.9"/>
+                        <path style="fill:#110202;" d="M41.2,80.2c-0.1-0.3-0.6-0.7-0.8-0.9c-0.3-0.1-0.6-0.1-0.7,0.1c-0.2,0.1-0.2,0.4-0.2,0.4l-0.7,5.3
+                            c0,0,0,0.4,0.3,0.4c0.3,0,0.3-0.3,0.3-0.3l0.1-0.9c0,0,0.1-0.8,0.1-0.9c0-0.1,0.2-0.1,0.2-0.1s0.3-0.1,0.7-0.6
+                            c0.3-0.3,0.6-0.9,0.8-1.3C41.4,81.1,41.3,80.4,41.2,80.2 M40.6,81.5c-0.4,0.6-0.7,1-0.7,1s0,0.1-0.2,0.1l0.3-2.7
+                            c0,0,0-0.1,0.1-0.1c0,0,0.2,0,0.5,0.3C40.7,80.4,41,80.9,40.6,81.5"/>
+                        <path style="fill:#110202;" d="M46.2,83.7c-0.1,0.3-0.2,1.5,0.2,1.6c0.1,0,0.1,0,0.3,0c0.3-0.1,0.6-0.1,0.8-0.3
+                            c0.1-0.1,0.3-0.2,0.3-0.3c0-0.1-0.1-0.2-0.2-0.2c0,0-0.1,0-0.3,0.1c-0.2,0.1-0.3,0.2-0.4,0.1c-0.1,0-0.1-0.1-0.2-0.1l0.6-4.2
+                            c0,0,0.1-0.5,0.1-0.8c0-0.3-0.1-0.5-0.2-0.5c-0.2,0-0.2,0.1-0.4,1.1C46.5,81,46.2,83.7,46.2,83.7"/>
+                        <path style="fill:#110202;" d="M56.5,78.7c0-0.3-0.1-0.5-0.3-0.6c0,0-0.1,0-0.2,0c-0.2,0-0.5,0.2-0.6,0.5c0,0-0.5,1.2-0.8,1.9
+                            c-0.8,2.3-1.6,3.7-1.6,3.7s-0.2,0.4,0.1,0.5c0.3,0.1,0.5-0.3,0.7-0.7c0.2-0.4,0.8-1.8,0.8-1.8l1.3-0.1l-0.1,1.1
+                            c0,0-0.1,0.6-0.1,0.8c0,0.3,0.5,0.7,0.6-0.4C56.6,81.4,56.5,78.7,56.5,78.7 M56,80.2c0,0.9,0,1.2,0,1.2l-0.6,0.1c0,0-0.2,0-0.4,0
+                            c-0.2,0,0.6-1.8,0.6-1.8l0.3-0.6c0,0,0.1-0.2,0.1-0.2C56,79,56,79.3,56,80.2"/>
+                        <path style="fill:#110202;" d="M64.3,77.8c0,0,0-0.1-0.2-0.1c-0.1,0-0.3,0.1-0.3,0.1c0,0-0.8,0.4-1.4,2.2
+                            c-0.6,1.8-0.1,2.6-0.1,2.6s0.2,0.6,0.7,0.7c0.5,0.2,0.6,0.1,0.7,0c0.1-0.1,0-0.3,0-0.3s-0.5-0.2-0.7-0.3c-0.2-0.2-0.5-1.3,0-2.6
+                            c0.5-1.3,1.1-1.7,1.1-1.7s0.3-0.1,0.3-0.4C64.4,77.9,64.3,77.8,64.3,77.8"/>
+                        <path style="fill:#110202;" d="M70.8,75.5c0,0-0.2-0.2,0-0.4c0.1-0.1,0.9-0.8,0.9-0.8s0.2-0.1,0.4,0c0.1,0.1,0.2,0.3,0,0.5
+                            c-0.1,0.1-0.9,0.8-0.9,0.8S71,75.6,70.8,75.5"/>
+                        <path style="fill:#110202;" d="M69.4,83c-0.1,0-0.1-0.3-0.1-0.6c0-0.1,0-0.2,0-0.3c0,0,0.5-3.3,0.6-4c0.2-0.7,0.2-1,0.4-1.2
+                            c0.2-0.2,0.8-0.4,0.8-0.4l0.6-0.1c0,0,0.1,0,0.2,0.2c0.1,0.2,0,0.3-0.2,0.4c-0.2,0.1-0.6,0.1-0.6,0.1s-0.4,0.1-0.5,0.9
+                            c-0.1,0.8-0.2,1.5-0.2,1.5s0,0.1,0.1,0.1c0.1,0,1.3-0.3,1.3-0.3s0.3-0.1,0.3,0.1c0.1,0.2,0,0.3-0.4,0.5c-0.4,0.2-1.5,0.4-1.5,0.4
+                            l-0.3,1.8c0,0-0.1,0.2,0,0.3c0.1,0,1-0.2,1-0.2l0.5-0.1c0,0,0.2,0,0.3,0.2c0.1,0.2-0.1,0.4-0.5,0.5c-0.4,0.1-1.3,0.2-1.3,0.2
+                            S69.6,83.1,69.4,83"/>
+                    </g>
+                </g>
+            </svg>
+        </div>
+        <div id="preloader-counter">0%</div>
+        <div>
+            &copy; 2020 Deplace Maison
+        </div>
+    </div>
+
+    <svg xmlns="http://www.w3.org/2000/svg" class="goo" version="1.1" width="100%">
+        <defs>
+            <filter id="goo">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur"></feGaussianBlur>
+                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 35 -15" result="goo"></feColorMatrix>
+                <feComposite in="SourceGraphic" in2="goo" operator="atop"></feComposite>
+            </filter>
+        </defs>
+    </svg>
+    <div class="page-wrap">
+        <header>
+            <nav class="mobile-nav">
+                <img class="logo" src="images/de-logotype.svg" alt="">
+                <div class="line"></div>
+                <div>CART</div>
+            </nav>
+            <div class="mobile-nav-open">
+                <div class="mobile-nav-open-flex">
+                    <img class="logo" src="images/de-logotype-white.svg" alt="">
+                    <i id="close" class="fas fa-times fa-3x"></i>
+                    <div>CART</div>
+                </div>
+                <div class="tabs">
+                    Tabs
+                </div>
+                <div class="shop-list">
+                    <ul>
+                        <li>SHOP</li>
+                        <li>COLLECTIONS</li>
+                        <li>ABOUT</li>
+                    </ul>
+                </div>
+                <div class="grid2x2">
+                    <div>FAQ</div>
+                    <div>RETURNS</div>
+                    <div>TERMS</div>
+                    <div>PRIVACY</div>
+                </div>
+                <div class="mobile-icons-row">
+                    <div>
+                        <div>
+                            <svg version="1.1" class="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                            viewBox="0 0 512 512" xml:space="preserve">
+                            <g>
+                                <path style="fill:#fff;" d="M366.4,35.3l-57.3-0.1c-64.3,0-105.9,42.6-105.9,108.7V194h-57.6c-5,0-9,4-9,9v72.6c0,5,4,9,9,9
+                                h57.6v183.2c0,5,4,9,9,9h75.1c5,0,9-4,9-9V284.6h67.3c5,0,9-4,9-9l0-72.6c0-2.4-1-4.7-2.6-6.4c-1.7-1.7-4-2.6-6.4-2.6h-67.3v-42.5
+                                c0-20.4,4.9-30.8,31.5-30.8l38.6,0c5,0,9-4,9-9V44.3C375.3,39.4,371.3,35.4,366.4,35.3z"/>
+                            </g>
+                        </svg>
+                        <svg version="1.1" class="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                        viewBox="0 0 512 512" xml:space="preserve">
+                            <g>
+                                <g>
+                                    <g>
+                                        <path style="fill:#fff;"  d="M337.7,38H174.3C99,38,38,99,38,174.3v163.5C38,413,99,474,174.3,474h163.5C413,474,474,413,474,337.7V174.3
+                                            C474,99,413,38,337.7,38z M433.1,337.7c0,52.6-42.8,95.4-95.4,95.4H174.3c-52.6,0-95.4-42.8-95.4-95.4V174.3
+                                            c0-52.6,42.8-95.4,95.4-95.4h163.5c52.6,0,95.4,42.8,95.4,95.4V337.7z"/>
+                                    </g>
+                                </g>
+                                <g>
+                                    <g>
+                                        <path style="fill:#fff;" d="M256,147c-60.2,0-109,48.8-109,109s48.8,109,109,109s109-48.8,109-109S316.2,147,256,147z M256,324.1
+                                            c-37.6,0-68.1-30.6-68.1-68.1c0-37.6,30.6-68.1,68.1-68.1s68.1,30.5,68.1,68.1C324.1,293.6,293.6,324.1,256,324.1z"/>
+                                    </g>
+                                </g>
+                                <g>
+                                    <g>
+                                        <circle style="fill:#fff;" cx="373.2" cy="138.8" r="14.5"/>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                        </div>
+                    </div>
+                    <div class="mobile-column">
+                        <div>
+                            <svg class="mobile-nav-open-up-arrow" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                viewBox="0 0 70 70" xml:space="preserve">
+                            <path style="fill:#fff;" d="M36,4c-0.6,1-1.1,1.6-1.8,2.5s-1.4,1.9-2.1,2.8c-1.4,1.9-2.7,3.8-4.1,5.6c-1.5,1.8-3.2,3.6-5.1,5
+                                c-1.7,1.3-4,3.6-5.6,5c-1.9,1.8-2.6,1.5-1.2,4.6c0.2,0.4,0.4,0.8,0.8,0.9c0.4,0.1,0.8,0,1.1-0.2c6.5-3.1,11.3-8.7,16-14.2
+                                c-0.6,14.8-1.1,29.6-1.7,44.4c-0.1,1.4-0.1,3,0.7,4.2c0.7,1.1,2.4,1.6,3.5,0.7c0.2-0.2,0.3-0.3,0.3-0.5c0-0.3,0.1-0.7,0.1-1
+                                c0-2.8,0-5.7,0-8.5c0.1-2.8,0.1-5.6,0.2-8.4c0.1-2.8,0.2-5.6,0.3-8.4c0.1-2.8,0.3-5.6,0.4-8.4c0.2-2.8-0.3-6.1-0.1-8.9
+                                c0.1-2.1,0.1-4.7,0.3-6.8c4.6,5.4,9,13.9,13.7,20c0.4,0.6,1.1,1.2,1.7,0.9c0.2-0.1,0.4-0.3,0.5-0.5c1.3-2.2,0.7-3.6-0.3-5.6
+                                s-2.4-4.2-3.8-5.9c-4.1-5.2-7.3-11.5-10.4-17.4c-0.3-0.6-0.7-1.1-1.1-1.5c-0.3-0.3-0.5-0.9-1-0.9C36.9,3.5,36.1,3.8,36,4z"/>
+                            </svg>
+                        </div>
+                        <div>Ink Mode</div>
+                    </div>
+                </div>
+                <div class="inquiries">
+                    <div>Inquiries &#129042; info@deplacemaison.com</div>
+                </div>
+            </div>
+            <nav class="desktop-nav">
+                <div><img class="vertical-logo" src="images/de-logotype-vert.svg" alt=""></div>
+                <div id="ink-mode">INK MODE</div>
+                <div>CART</div>
+            </nav>
+            <div class="bottom-left-list">
+                <ul>
+                    <li>SHOP</li>
+                    <li>COLLECTIONS</li>
+                    <li>ABOUT</li>
+                </ul>
+            </div>
+        </header>
+        <main>
+            <section>
+                <div class="headline">
+                    <h1 class="spring">Spring,</h1>
+                    <h1 class="summer">Summer</h1>
+                    <div class="coll">
+                        <div>COLL.</div>
+                        <div class="year">2021</div>
+                    </div>
+                </div>
+                <div class="men-women-grid">
+                    <div class="man-default-div">
+                        <picture>
+                            <source media="(min-width:800px)" srcset="images/man-default-p-800.jpeg">
+                            <source media="(min-width:500px)" srcset="images/man-default-p-500.jpeg">
+                            <img src="images/man-default-p-500.jpeg" alt="">
+                        </picture>
+                    </div>
+                    <div>
+                        <picture>
+                            <source media="(min-width:800px)" srcset="images/women-default-p-800.jpeg">
+                            <source media="(min-width:500px)" srcset="images/women-default-p-500.jpeg">
+                            <img src="images/women-default-p-500.jpeg" alt="">
+                        </picture>
+                    </div>
+                </div>
+                <div class="description-grid">
+                    <div class="description-flex">
+                        <div>(01)</div>
+                        <div>MAN</div>
+                    </div>
+                    <div class="description-flex">
+                        <div>(02)</div>
+                        <div>WMNS</div>
+                    </div>
+                </div>
+                <div class="explore-div">
+                    <div>Explore</div>
+                    <img class="circle" src="images/circle-container.svg" alt="">
+                    <img class="arrow-right" src="images/arrow.svg" alt="">
+                </div>
+            </section>
+            <div class="marquee">
+                <div>
+                    <span>DEPLACE SHOP</span>
+                    <span>&#9632;</span>
+                    <span>DO NOT SCROLL</span>
+                    <span>&#9632;</span>
+                    <span>DEPLACE SHOP</span>
+                    <span>&#9632;</span>
+                    <span>DO NOT SCROLL</span>
+                    <span>&#9632;</span>
+                    <span>DEPLACE SHOP</span>
+                    <span>&#9632;</span>
+                    <span>DO NOT SCROLL</span>
+                    <span>&#9632;</span>
+                    <span>DEPLACE SHOP</span>
+                    <span>&#9632;</span>
+                    <span>DO NOT SCROLL</span>
+                    <span>&#9632;</span>
+                    <span>DEPLACE SHOP</span>
+                    <span>&#9632;</span>
+                    <span>DO NOT SCROLL</span>
+                    <span>&#9632;</span>
+                    <span>DEPLACE SHOP</span>
+                    <span>&#9632;</span>
+                    <span>DO NOT SCROLL</span>
+                    <span>&#9632;</span>
+                    <span>DEPLACE SHOP</span>
+                    <span>&#9632;</span>
+                    <span>DO NOT SCROLL</span>
+                    <span>&#9632;</span>
+                    <span>DEPLACE SHOP</span>
+                    <span>&#9632;</span>
+                    <span>DO NOT SCROLL</span>
+                    <span>&#9632;</span>
+                    <span>DEPLACE SHOP</span>
+                    <span>&#9632;</span>
+                    <span>DO NOT SCROLL</span>
+                    <span>&#9632;</span>
+                    <span>DEPLACE SHOP</span>
+                    <span>&#9632;</span>
+                    <span>DO NOT SCROLL</span>
+                    <span>&#9632;</span>
+                </div>
+            </div>
+            <div class="who-we-are-div">
+              <p>An independent <span class="underline">brand</span> of urban trekking shoes and accessories that comes from a convergence of arts and personalities.</p>
+            </div>
+            <div class="slider-wrap">
+                <div class="slider">
+                    <div class="slider-inner">
+                        <div class="card">
+                            <div class="card-img-div the-code"></div>
+                            <img class="unisex" src="images/unisex-label.svg" alt="">
+                            <div>SS/20</div>
+                            <div>THE CODE</div>
+                            <div class="line-through">&euro; 240EUR</div>
+                            <div>&euro; 144EUR</div>
+                        </div>
+                        <div class="card">
+                            <div class="card-img-div duran"></div>
+                            <img class="unisex" src="images/unisex-label.svg" alt="">
+                            <div>SS/20</div>
+                            <div>DURAN</div>
+                            <div class="line-through">&euro; 240EUR</div>
+                            <div>&euro; 144EUR</div>
+                        </div>
+                        <div class="card">
+                            <div class="card-img-div cactus"></div>
+                            <img class="unisex" src="images/unisex-label.svg" alt="">
+                            <div>SS/20</div>
+                            <div>CACTUS</div>
+                            <div class="line-through">&euro; 300EUR</div>
+                            <div>&euro; 180EUR</div>
+                        </div>
+                        <div class="card">
+                            <div class="card-img-div the-eye"></div>
+                            <img class="unisex" src="images/unisex-label.svg" alt="">
+                            <div>SS/20</div>
+                            <div>THE EYE</div>
+                            <div class="line-through">&euro; 240EUR</div>
+                            <div>&euro; 144EUR</div>
+                        </div>
+                        <div class="card">
+                            <div class="card-img-div carnera"></div>
+                            <img class="unisex" src="images/unisex-label.svg" alt="">
+                            <div>SS/20</div>
+                            <div>CARNERA</div>
+                            <div class="line-through">&euro; 240EUR</div>
+                            <div>&euro; 144EUR</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="shop-all">
+                <div>Shop all</div>
+                <img class="circle-2" src="images/ink-container.svg" alt="">
+                <img class="arrow-right-2" src="images/arrow-right.svg" alt="">
+            </div>
+            <div class="testimonials">
+               <p class="testimonial-name">William Gibson</p>
+               <p class="testimonial-quote">Good things come to those who wait – Déplacé Maison is what has been missing in the modern fashion industry for years. Buy a shoe of high quality and design it finally happened.</p>
+            </div>
+        </main>
+        <footer>
+            <div class="footer-grid">
+                <div class="mobile-none">
+                    <h4>Subscribe to Newsletter</h4>
+                    <img class="newsletter" src="images/newsletter-face.svg" alt="">
+                </div>
+                <div>
+                    <ul>
+                        <li>Info</li>
+                        <li>FAQ</li>
+                        <li>Returns</li>
+                        <li>Contact</li>
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <li>Policy</li>
+                        <li>Terms</li>
+                        <li>Privacy</li>
+                        <li>Cookie</li>
+                    </ul>
+                </div>
+                <div class="mobile-none newsletter-input-div">
+                    <h5>Subscribe to our Newsletter</h5>
+                    <form id="form">
+                        <input type="email" placeholder="email address" required>
+                        <button id="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+            <div class="arrow-up">
+                <img id="arrow-up" src="images/arrow-up.svg" alt="">
+            </div>
+            <div class="footer-bottom">
+                <div class="flex-end">Credits</div>
+                <div class="footer-bottom-flex"><div> &copy; 2020 Deplace </div> Maison.</div>
+                <div class="flex-end">
+                    <img id="facebook" class="icon" src="images/facebook1.svg" alt="">
+                    <img id="instagram" class="icon" src="images/instagram1.svg" alt="">
+                </div>
+            </div>
+        </footer>
+    </div>
+    <div id="cursor"></div>
+</body>
+</html>

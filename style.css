@@ -1,8 +1,8 @@
 :root {
-    --white:#fcf9ee;
-    --yellow:#ddc92a;
-    --black:#141414;
-    --nude:#e7d6c4;
+    --white: #fcf9ee;
+    --yellow: #ddc92a;
+    --black: #141414;
+    --nude: #e7d6c4;
     --cursor-size: 28px;
     --bg: #FAF7EE;
 }
@@ -35,22 +35,21 @@
     margin: 200px 0;
 }
 
-
 .page-wrap {
     background: var(--bg);
     min-height: 100vh;
-  }
-  
-  #cursor {
+}
+
+#cursor {
     position: fixed;
     top: calc(var(--cursor-size) * -0.5);
-    left:  calc(var(--cursor-size) * -0.5);
+    left: calc(var(--cursor-size) * -0.5);
     pointer-events: none;
-    mix-blend-mode: difference;  
+    mix-blend-mode: difference;
     filter: url(#goo);
-  }
-  
-  .cursor-circle {
+}
+
+.cursor-circle {
     position: absolute;
     top: 0;
     left: 0;
@@ -122,7 +121,6 @@ ul {
     font-size: 20px;
     font-weight: 200;
     padding-left: 10px;
-    /* margin-top: -20px; */
     align-self: center;
     line-height: 20px;
 }
@@ -229,7 +227,7 @@ ul {
 }
 
 .line::before {
-    content:"";
+    content: "";
     width: 16px;
     height: 2px;
     background: #000;
@@ -239,7 +237,7 @@ ul {
 }
 
 .line::after {
-    content:"";
+    content: "";
     width: 16px;
     height: 2px;
     background: #000;
@@ -305,17 +303,25 @@ footer {
     border-top: 2px solid;
     border-bottom: 2px solid;
 }
+
 .marquee div {
     display: inline-block;
     padding-left: 100%;
     animation: marquee 30s linear infinite;
 }
+
 .marquee div span {
     padding-left: 15px
 }
+
 @keyframes marquee {
-    0%   { transform: translate(0, 0); }
-    100% { transform: translate(-100%, 0); }
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(-100%, 0);
+    }
 }
 
 .mobile-nav-open {
@@ -328,7 +334,7 @@ footer {
     position: absolute;
     top: 0;
     left: 0;
-} 
+}
 
 .mobile-nav-open-flex {
     display: flex;
@@ -458,10 +464,10 @@ input:focus {
 
 .slider-inner {
     position: relative;
-	width: 100%;
-	overflow: hidden;
-	white-space: nowrap;
-	cursor: grab;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: grab;
 }
 
 .active {
@@ -469,14 +475,14 @@ input:focus {
 }
 
 .card {
-    background:#e8d7c5;
+    background: #e8d7c5;
     text-align: center;
     width: 250px;
     height: 100%;
     border: 2px solid;
     display: inline-block;
-	margin-left: 10px;
-	user-select: none;
+    margin-left: 10px;
+    user-select: none;
 }
 
 .card:first-of-type {
@@ -529,7 +535,7 @@ input:focus {
 }
 
 #ink-mode {
-    background: rgb(216, 196,179);
+    background: rgb(216, 196, 179);
     width: 100px;
     height: 20px;
     color: #000;
@@ -552,7 +558,7 @@ input:focus {
     display: block;
 }
 
-@media (min-width: 1000px){
+@media (min-width: 1000px) {
     .mobile-none {
         display: block;
     }
@@ -597,7 +603,7 @@ input:focus {
         line-height: initial;
     }
 
-    .arrow-right, 
+    .arrow-right,
     .arrow-right-2 {
         left: 94%;
     }
@@ -656,7 +662,7 @@ input:focus {
         height: 600px;
         position: relative;
     }
-    
+
     .slider-inner {
         position: relative;
         width: 100%;
@@ -664,13 +670,13 @@ input:focus {
         white-space: nowrap;
         cursor: grab;
     }
-    
+
     .active {
         cursor: grabbing;
     }
-    
+
     .card {
-        background:#e8d7c5;
+        background: #e8d7c5;
         text-align: center;
         width: 400px;
         height: 100%;
@@ -680,12 +686,12 @@ input:focus {
         user-select: none;
         color: #000;
     }
-        
+
     .card-img-div {
         height: 400px;
         width: 100%;
     }
-    
+
     .the-code {
         background: url(images/tc-black-side-p-800.jpeg);
         background-repeat: no-repeat;
@@ -693,7 +699,7 @@ input:focus {
         width: 100%;
         height: 400px;
     }
-    
+
     .duran {
         background: url(images/du-sand-side-p-800.jpeg);
         background-repeat: no-repeat;
@@ -701,7 +707,7 @@ input:focus {
         width: 100%;
         height: 400px;
     }
-    
+
     .cactus {
         background: url(images/ct-army-side-p-800.jpeg);
         background-repeat: no-repeat;
@@ -709,7 +715,7 @@ input:focus {
         width: 100%;
         height: 400px;
     }
-    
+
     .the-eye {
         background: url(images/te-sand-side-p-800.jpeg);
         background-repeat: no-repeat;
@@ -717,7 +723,7 @@ input:focus {
         width: 100%;
         height: 400px;
     }
-    
+
     .carnera {
         background: url(images/ca-black-side-p-800.jpeg);
         background-repeat: no-repeat;
@@ -765,7 +771,6 @@ input:focus {
         position: absolute;
         right: 0;
         bottom: 10%;
-        /*width: 960px;*/
         width: 900px;
         margin-right: 40px;
     }
@@ -777,10 +782,10 @@ input:focus {
 
     /* ink mode styles */
     .ink {
-        color: rgb(216, 196,179);
+        color: rgb(216, 196, 179);
     }
 
-    .ink .page-wrap, 
+    .ink .page-wrap,
     .ink footer {
         background: var(--black);
     }
@@ -791,7 +796,7 @@ input:focus {
 
 }
 
-@media (min-width: 1500px){
+@media (min-width: 1500px) {
     .description-flex {
         margin-left: 575px;
     }

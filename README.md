@@ -10,8 +10,8 @@
       Github Pages
     </a>
     <span> | </span>
-    <a href="https://www.frontendpractice.com/project/deplace-maison">
-      Frontend Practice    
+    <a href="https://www.frontendpractice.com/projects/deplace-maison">
+      Frontend Practice
     </a>
   </h3>
 </div>
@@ -26,10 +26,10 @@
 
 ## Overview
 
-![](deplace-desktop.png)
-![](deplace-desktop-ink.png)
-![](deplace-mobile.png)
-![](deplace-mobile-panel.png)
+![Desktop](screenshots/deplace-desktop.png)
+![Desktop Ink Mode](screenshots/deplace-desktop-ink.png)
+![Mobile](screenshots/deplace-mobile.png)
+![Mobile Panel](screenshots/deplace-mobile-panel.png)
 
 ### Built With
 
@@ -50,7 +50,7 @@ The [challenge](https://www.frontendpractice.com/project/deplace-maison) was to 
 ## Improvements
 
 - Need to work on animations
-- Using a picture element in a card of the slider creates many problems 
+- Using a picture element in a card of the slider creates many problems
 
 ## Useful Resources
 
